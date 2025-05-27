@@ -4,9 +4,9 @@ USE transactions;
 CREATE TABLE IF NOT EXISTS transactions (
     id INT AUTO_INCREMENT PRIMARY KEY,
     amount INT,
-    description VARCHAR(225)
+    description VARCHAR(255)
 );
 
-CREATE USER IF NOT EXISTS 'expense'@'%' IDENTIFIED BY 'EXPENSEApp@1';
-GRANT ALL ON transactions.* TO 'expense '@'%';
-FLUSH PRIVILAGES;
+CREATE USER IF NOT EXISTS 'expense'@'%' IDENTIFIED BY 'ExpenseApp@1';
+GRANT ALL ON transactions.* TO 'expense'@'%';
+FLUSH PRIVILEGES;
